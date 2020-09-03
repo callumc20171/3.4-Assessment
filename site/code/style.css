@@ -84,6 +84,7 @@ footer p {
 
 /* TOPNAV STYLE */
 .topnav {
+	position: relative;
 	overflow: hidden;
 	background-color: #D1D8E3;
 	border-bottom: 2px solid #323039;
@@ -119,9 +120,9 @@ footer p {
 
 #ImageDiv {
 	position: absolute;
-	left: 8px;
-	top: 4px;
-	height: 55px;
+	padding: 8px;
+	height: 100%;
+	width: auto;
 }
 
 #NavLogo {
@@ -153,6 +154,74 @@ footer p {
 	text-align: left;
 	padding: 8px;
 }
+
+.dot {
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  margin: 0 2px;
+  background-color: #FAFAFF;
+  border: 2px solid #D1D8E3; 
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #18C3F8;
+}
+
+#InformationDiv {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 45%;
+	height: 100%;
+	background-color: #FAFAFF;
+    clip-path: polygon(20% 0, 100% 0%, 100% 100%, 5% 100%);
+}
+
+#InformationArea {
+	position: absolute;
+	left: 20%;
+	width: 80%;
+	height: 100%;
+
+	display: grid;
+
+	grid-template-columns: [total] 100%;
+	grid-template-rows: [text] 1fr [logo] 3fr [steps] 1fr;
+}
+
+#TextRow {
+	font-size: 150%;
+	margin: auto;
+	width: 100%;
+	padding: 6px;
+	text-align: left;
+	grid-column: total;
+	grid-row: text;
+}
+
+#InformationLogo {
+	grid-column: total;
+	grid-row: logo;
+
+	width: 100%;
+	height: auto;
+
+	margin: auto;
+}
+
+#InformationSteps {
+	grid-column: total;
+	grid-row: steps;
+
+	width: fit-content;
+
+	margin-left: auto;
+	margin-right: auto;
+}
 /* END SITE */
 
 /* PARALLAX STYLE */
@@ -167,14 +236,43 @@ footer p {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	transition: ease 0.6s;
 }
 
 #IndexParallax {
-	background-image: url("../img/IndexParallax.jpg");
+	position: relative;
+	height: 100vh;
+}
+
+.index1 {
+	background-image: url("../img/index1.jpg");
+}
+
+.index2 {
+	background-image: url("../img/index2.jpg");
+}
+
+.index3 {
+	background-image: url("../img/index3.jpg");
 }
 /* END PARALLAX */
 
 /* MEDIA QUERIES */
+
+@media screen and (min-width: 1920px) {
+	body {
+		font-size: 200%;
+	}
+
+	footer {
+		height: 250px;
+	}
+
+	footer a {
+		font-size: 150%;
+	}
+}
 @media screen and (max-width: 800px) {
 	.column {
 		width: 50%;
@@ -233,6 +331,14 @@ footer p {
 	#ImageDiv {
 		display: block;
 	}
+
+  #InformationDiv {
+  	display: none;
+  }
+
+	#TextRow {
+		font-size: 80%;
+	}
 }
 
 @media screen and (max-width: 400px) {
@@ -240,8 +346,6 @@ footer p {
   footer p {
   	font-size: 100%;
   }
-
-  
 
   .column {
   	display: block;
