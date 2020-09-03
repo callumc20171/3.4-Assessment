@@ -52,6 +52,10 @@ h1, h2, h3, h4 {
 	font-family: "Raleway", sans-serif;
 }
 
+p {
+	font-size: 125%;
+}
+
 footer {
 	width: 100%;
 	height: 140px;
@@ -80,21 +84,22 @@ footer p {
 
 /* TOPNAV STYLE */
 .topnav {
-  overflow: hidden;
-  background-color: #D1D8E3;
+	overflow: hidden;
+	background-color: #D1D8E3;
+	border-bottom: 2px solid #323039;
 }
 
 .topnav a {
-  float: right;
-  display: block;
-  color: #323039;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 24px;
+	float: right;
+	display: block;
+	color: #323039;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 175%;
 }
 
-.topnav a:after {
+.topnav a:not(:last-child):after {
 	content: " | ";
 }
 
@@ -113,6 +118,13 @@ footer p {
 }
 
 #ImageDiv {
+	position: absolute;
+	left: 8px;
+	top: 4px;
+	height: 55px;
+}
+
+#NavLogo {
 	height: 100%;
 	width: auto;
 }
@@ -133,6 +145,10 @@ footer p {
 	width: 100%;
 }
 
+.content p {
+	padding: 12px;
+}
+
 .title {
 	text-align: left;
 	padding: 8px;
@@ -145,16 +161,16 @@ footer p {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 200px;
+	height: 350px;
 
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: fill;
+	background-size: cover;
 }
 
 #IndexParallax {
-	background-image: url("../img/logo-min.png");
+	background-image: url("../img/IndexParallax.jpg");
 }
 /* END PARALLAX */
 
@@ -172,11 +188,50 @@ footer p {
 	.parallax {
 		height: 200px;
 	}
+
+	#ImageDiv {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 700px) {
 	.parallaxTitle {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.topnav a:not(:first-child) {display: none;}
+	.topnav a.icon {
+	  float: right;
+	  display: block;
+	}
+
+	.topnav a:not(:last-child) {border-bottom: 2px solid #323039;}
+
+	.topnav.responsive {
+		position: relative;
+		display: flex;
+		flex-direction: column-reverse;
+		border-bottom: none;
+	}
+	.topnav.responsive .icon {
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	}
+	.topnav.responsive a {
+	  float: none;
+	  display: block;
+	  text-align: left;
+	}
+
+	.topnav.responsive > #ImageDiv {
+		display: none;
+	}
+
+	#ImageDiv {
+		display: block;
 	}
 }
 
@@ -186,23 +241,7 @@ footer p {
   	font-size: 100%;
   }
 
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+  
 
   .column {
   	display: block;
