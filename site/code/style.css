@@ -27,6 +27,10 @@ Blue Accent - #18C3F8
 	box-sizing: border-box;
 }
 
+div {
+	position: relative;
+}
+
 body {
 	width: 100%;
 	height: 100%;
@@ -222,6 +226,11 @@ footer p {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+#PhoneDesc {
+	display: none;
+	text-align: center;
+}
 /* END SITE */
 
 /* PARALLAX STYLE */
@@ -242,7 +251,7 @@ footer p {
 
 #IndexParallax {
 	position: relative;
-	height: 100vh;
+	height: calc(100vh - 60px);
 }
 
 .index1 {
@@ -260,7 +269,7 @@ footer p {
 
 /* MEDIA QUERIES */
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 2160px) {
 	body {
 		font-size: 200%;
 	}
@@ -296,6 +305,10 @@ footer p {
 	.parallaxTitle {
 		display: none;
 	}
+
+	#TextRow {
+		font-size: 125%;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -306,6 +319,10 @@ footer p {
 	}
 
 	.topnav a:not(:last-child) {border-bottom: 2px solid #323039;}
+
+	.topnav a:not(:last-child):after {
+		content: "";
+	}
 
 	.topnav.responsive {
 		position: relative;
@@ -332,12 +349,20 @@ footer p {
 		display: block;
 	}
 
-  #InformationDiv {
-  	display: none;
-  }
+	#InformationDiv {
+		display: none;
+	}
 
 	#TextRow {
 		font-size: 80%;
+	}
+
+	#IndexParallax {
+		height: 350px;
+	}
+
+	#PhoneDesc {
+		display: block;
 	}
 }
 

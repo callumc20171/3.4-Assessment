@@ -1,3 +1,5 @@
+const LOOP_TIME = 10000
+
 var slideIndex = 1;
 var bgImages = ["index1", "index2", "index3"];
 
@@ -10,23 +12,6 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
-// function showSlides(n) {
-//   //Shows the given slide
-//   var i;
-//   var slides = document.getElementsByClassName("carSlide");
-//   var dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = slides.length}
-//   for (i = 0; i < slides.length; i++) {
-//       slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//       dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex-1].style.display = "block";
-//   dots[slideIndex-1].className += " active";
-// }
 
 function showSlides(n) {
     var i;
@@ -45,3 +30,13 @@ function showSlides(n) {
 }
 
 currentSlide(1);
+
+function autoLoopSlides() {
+	setTimeout(function() {
+		autoLoopSlides(LOOP_TIME);
+	}, LOOP_TIME);
+
+	plusSlides(1);
+}
+
+autoLoopSlides();
