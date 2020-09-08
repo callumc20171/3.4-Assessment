@@ -37,6 +37,7 @@ body {
 	margin: 0px;
 	font-family: "Montserrat", sans-serif;
 	font-size: 16px;
+	background-color: #FAFAFF;
 }
 
 h1 {
@@ -229,6 +230,12 @@ footer p {
 #PhoneDesc {
 	display: none;
 	text-align: center;
+}
+
+#PhoneDescLogo {
+	width: 45%;
+	height: auto;
+	padding: 8px;
 }
 /* END SITE */
 
