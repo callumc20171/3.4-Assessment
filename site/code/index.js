@@ -29,8 +29,6 @@ function showSlides(n) {
 	dots[slideIndex-1].className += " active";
 }
 
-currentSlide(1);
-
 function autoLoopSlides() {
 	setTimeout(function() {
 		autoLoopSlides(LOOP_TIME);
@@ -40,3 +38,4 @@ function autoLoopSlides() {
 }
 
 autoLoopSlides();
+currentSlide(1);

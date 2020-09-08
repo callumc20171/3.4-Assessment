@@ -92,6 +92,7 @@ footer p {
 	overflow: hidden;
 	background-color: #D1D8E3;
 	border-bottom: 2px solid #323039;
+	
 }
 
 .topnav a {
@@ -157,6 +158,7 @@ footer p {
 .title {
 	text-align: left;
 	padding: 8px;
+	color: #FAFAFF;
 }
 
 .dot {
@@ -173,6 +175,25 @@ footer p {
 
 .active, .dot:hover {
   background-color: #18C3F8;
+}
+
+.resultsBox {
+	border: 2px solid #323039;
+	padding: 16px;
+	width: 80%;
+	height: fit-content;
+	margin: 32px auto;
+	text-align: center;
+}
+
+.resultsImg {
+	display: block;
+	max-width: 80%;
+	max-height: 20%;
+	width: auto;
+	height: auto;
+	margin: 12px auto;
+	border: 2px solid #323039; 
 }
 
 #InformationDiv {
@@ -245,7 +266,7 @@ footer p {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 350px;
+	height: 400px;
 
 	background-attachment: fixed;
 	background-position: center;
@@ -253,10 +274,6 @@ footer p {
 	background-size: cover;
 
 	transition: ease 0.6s;
-}
-
-#IndexParallax {
-	height: calc(100vh - 60px);
 }
 
 .index1 {
@@ -269,6 +286,18 @@ footer p {
 
 .index3 {
 	background-image: url("../img/index3.jpg");
+}
+
+#IndexParallax {
+	height: calc(100vh - 60px);
+}
+
+#AboutParallax {
+	background-image: url("../img/index1.jpg");
+}
+
+#ResultsParallax {
+	background-image: url("../img/logo.png")
 }
 /* END PARALLAX */
 
@@ -291,7 +320,12 @@ footer p {
 		height: calc(100vh - 96px);
 	}
 }
+
 @media screen and (max-width: 800px) {
+	.title {
+		text-align: center;
+	}
+
 	.column {
 		width: 50%;
 		margin-top: 16px;
@@ -302,7 +336,7 @@ footer p {
 	}
 
 	.parallax {
-		height: 200px;
+		height: 350px;
 	}
 
 	#ImageDiv {
@@ -311,10 +345,6 @@ footer p {
 }
 
 @media screen and (max-width: 700px) {
-	.parallaxTitle {
-		display: none;
-	}
-
 	#TextRow {
 		font-size: 125%;
 	}
@@ -354,6 +384,10 @@ footer p {
 		display: none;
 	}
 
+	.parallax {
+		height: 300px;
+	}
+
 	#ImageDiv {
 		display: block;
 	}
@@ -386,10 +420,6 @@ footer p {
   	width: 100%;
   	margin-top: 20px;
   } 
-
-  .parallax {
-  	height: 100px;
-  }
 
   #FooterText {
   	font-size: 75%;
