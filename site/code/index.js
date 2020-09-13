@@ -1,6 +1,7 @@
-const LOOP_TIME = 10000
+const LOOP_TIME = 10000 //Time in ms between pic change
 
 var slideIndex = 1;
+//List of backgrounds to pick from
 var bgImages = ["index1", "index2", "index3"];
 
 // Next/previous controls
@@ -30,6 +31,7 @@ function showSlides(n) {
 }
 
 function autoLoopSlides() {
+	//Automatically switch index picture every LOOP_TIME seconds
 	setTimeout(function() {
 		autoLoopSlides(LOOP_TIME);
 	}, LOOP_TIME);
