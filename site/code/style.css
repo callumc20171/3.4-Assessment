@@ -132,6 +132,10 @@ footer p {
 	margin-top: -16px;
 }
 
+#DropDownButton {
+	border-radius: 50%;
+}
+
 #NavLogo {
 	height: 100%;
 	width: auto;
@@ -288,6 +292,13 @@ footer p {
 	grid-row: all;
 }
 
+#NationalsImg {
+	max-width: 40%;
+	max-height: auto;
+	float: left;
+	padding: 14px;
+}
+
 #AboutImg {
 	grid-column: img;
 	grid-row: all;
@@ -356,6 +367,12 @@ footer p {
 
 	#IndexParallax {
 		height: calc(100vh - 96px);
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	#AboutText {
+		font-size: 125%;
 	}
 }
 
