@@ -132,6 +132,15 @@ footer p {
 	margin-top: -16px;
 }
 
+#ImageDiv a {
+	display: initial;
+	float: none;
+}
+
+#ImageDiv a:hover {
+	background-color: #D1D8E3 !important;
+}
+
 #DropDownButton {
 	border-radius: 50%;
 }
@@ -278,6 +287,11 @@ footer p {
 	padding: 8px;
 }
 
+#AboutTitle {
+	width: 75%;
+	margin: 24px auto 0px auto;
+}
+
 #AboutInfo {
 	margin-left: auto;
 	margin-right: auto;
@@ -285,6 +299,7 @@ footer p {
 	display: grid;
 	grid-template-columns: [text] 80% [img] 20%;
 	grid-template-rows: [all] 100%;
+	padding: 12px;
 }
 
 #AboutText {
@@ -343,6 +358,10 @@ footer p {
 
 #AboutParallax {
 	background-image: url("../img/index1.jpg");
+}
+
+#TeamsParallax {
+	background-image: url("../img/teams.jpg")
 }
 
 #ResultsParallax {
