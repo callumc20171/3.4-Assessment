@@ -25,6 +25,7 @@ Blue Accent - #18C3F8
 /* TAG RULES */
 * {
 	box-sizing: border-box;
+	color: #323039;
 }
 
 div {
@@ -193,7 +194,7 @@ footer p {
   background-color: #18C3F8;
 }
 
-.resultsBox {
+.box {
 	border: 2px solid #323039;
 	padding: 16px;
 	width: 80%;
@@ -202,7 +203,7 @@ footer p {
 	text-align: center;
 }
 
-.resultsBox p {
+.box p {
 	text-align: left;
 	margin: 8px auto;
 	width: 50%;
@@ -210,7 +211,7 @@ footer p {
 	padding: 24px;
 }
 
-.resultsImg {
+.boxImg {
 	display: block;
 	width: calc(100% + 32px);
 	max-height: 20%;
@@ -221,7 +222,36 @@ footer p {
 
 .topScorers {
 	text-align: center;
-	line-height: 150%;
+	line-height: 175%;
+}
+
+.teamInfo {
+	display: grid;
+	width: 100%;
+	height: fit-content;
+	grid-template-rows: [all] 100%;
+	grid-template-columns: [record] 1fr [name] 1fr [coach] 1fr;
+}
+
+.teamInfo p {
+	margin: auto;
+	padding: 0px !important;
+	width: fit-content;
+}
+
+.teamRecord {
+	grid-row: all;
+	grid-column: record;
+}
+
+.teamName {
+	grid-row: all;
+	grid-column: name;
+}
+
+.teamCoach {
+	grid-row: all;
+	grid-column: coach;
 }
 
 #InformationDiv {
@@ -357,7 +387,7 @@ footer p {
 }
 
 #AboutParallax {
-	background-image: url("../img/index1.jpg");
+	background-image: url("../img/about.jpg");
 }
 
 #TeamsParallax {
@@ -433,7 +463,7 @@ footer p {
 		height: 350px;
 	}
 
-	.resultsBox p {
+	.box p {
 		padding: 12px;
 	}
 
@@ -526,7 +556,7 @@ footer p {
   	margin-top: 20px;
   } 
 
-  .resultsBox p {
+  .box p {
   	display: block;
   	padding: 8px;
   	margin: 4px;
