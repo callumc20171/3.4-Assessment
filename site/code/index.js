@@ -15,6 +15,7 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+	//Set the shown slide to the nth slide
     var i;
     var dots = document.getElementsByClassName("dot");
 	if (n > bgImages.length) {slideIndex = 1}

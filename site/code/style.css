@@ -98,6 +98,7 @@ footer p {
 }
 
 .topnav a {
+	/* Styles the topnav links */
 	float: right;
 	display: block;
 	color: #001541;
@@ -108,6 +109,8 @@ footer p {
 }
 
 .topnav a:not(:first-of-type):not(:last-child):after {
+	/* Adds the pipe after every top nav a element
+	 except first image and last hamburger*/
 	content: " | ";
 }
 
@@ -126,6 +129,7 @@ footer p {
 }
 
 #ImageDiv {
+	/* Aligns the photo to the top left of nav bar*/
 	position: absolute;
 	padding: 8px;
 	height: 100%;
@@ -163,6 +167,7 @@ footer p {
 
 /* SITE STYLE */
 .content {
+	/* Sets standard div settings for the page */
 	background-color: #FAFAFF;
 	height: fit-content;
 	width: 100%;
@@ -173,6 +178,7 @@ footer p {
 }
 
 .title {
+	/* Used to show text over parallax */
 	text-align: left;
 	padding: 8px;
 	color: #FAFAFF;
@@ -180,6 +186,7 @@ footer p {
 }
 
 .dot {
+	/* Dots used by the slide show */
   cursor: pointer;
   height: 60px;
   width: 60px;
@@ -196,6 +203,7 @@ footer p {
 }
 
 .box {
+	/* Box style used throughout the site */
 	padding: 16px;
 	width: 80%;
 	height: fit-content;
@@ -216,6 +224,7 @@ footer p {
 }
 
 .boxImg {
+	/* Styles the img to fit the top of the box */
 	display: block;
 	width: calc(100% + 32px);
 	max-height: 20%;
@@ -294,6 +303,7 @@ footer p {
 }
 
 #InformationDiv {
+	/* Sets the shape of the information div on index page */
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -304,6 +314,7 @@ footer p {
 }
 
 #InformationArea {
+	/* Aligns the text in the information div */
 	position: absolute;
 	left: 20%;
 	width: 80%;
@@ -345,6 +356,7 @@ footer p {
 	margin-right: auto;
 }
 
+/* Used when the information div wont fit on page */
 #PhoneDesc {
 	display: none;
 	text-align: center;
@@ -399,6 +411,7 @@ footer p {
 
 /* PARALLAX STYLE */
 .parallax {
+	/* Base parallax styling */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -413,6 +426,7 @@ footer p {
 	transition: ease 0.6s;
 }
 
+/* Different parallax background images */
 .index1 {
 	background-image: url("../img/index1.jpg");
 }
@@ -445,6 +459,7 @@ footer p {
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 2160px) {
+	/* Scales text to 4k */
 	body {
 		font-size: 200%;
 	}
@@ -475,6 +490,7 @@ footer p {
 }
 
 @media screen and (max-width: 800px) {
+	/* Tablet scale settings */
 	h1 {
 		font-size: 175%;
 	}
@@ -532,6 +548,7 @@ footer p {
 }
 
 @media screen and (max-width: 600px) {
+	/* Adds the responsive attribute to the topnav */
 	.topnav a:not(:first-child) {display: none;}
 	.topnav a.icon {
 	  float: right;
@@ -569,6 +586,7 @@ footer p {
 	}
 
 	.topnav.responsive > #ImageDiv {
+		/* Removes the image when responsive */
 		display: none;
 	}
 
@@ -579,6 +597,8 @@ footer p {
 	.scorer {
 		width: 75%;
 	}
+
+	/* General font size changes */
 
 	.scorer h2 {
 		font-size: 175%;
@@ -640,6 +660,14 @@ footer p {
   #NationalsImg {
   	max-width: 100%;
   	float: none;
+  }
+
+  .teamInfo {
+  		grid-template-columns: [name] 100%;
+  }
+
+  .teamRecord, .teamCoach {
+  	display: none !important;
   }
 
   #FooterText {
