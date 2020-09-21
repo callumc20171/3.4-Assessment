@@ -225,6 +225,14 @@ footer p {
 	line-height: 175%;
 }
 
+.topScorerImg {
+	width: auto;
+	height: auto;
+	max-height: auto;
+	max-width: 10%;
+	padding-right: 12px;
+}
+
 .teamInfo {
 	display: grid;
 	width: 100%;
@@ -342,6 +350,10 @@ footer p {
 	max-height: auto;
 	float: left;
 	padding: 14px;
+}
+
+#PhotoMembers {
+	padding: 12px;
 }
 
 #AboutImg {
@@ -485,6 +497,10 @@ footer p {
 	  display: block;
 	}
 
+	.topnav a:last-child:hover {
+		background-color: #FAFAFF;
+	}
+
 	.topnav a:not(:last-child) {border-bottom: 2px solid #323039;}
 
 	.topnav a:not(:last-child):after {
@@ -541,6 +557,11 @@ footer p {
 
 	#AboutInfo {
 		grid-template-columns: [text] 100%;
+	}
+
+	#PhotoMembers {
+		text-align: left;
+		font-size: 75%;
 	}
 }
 
