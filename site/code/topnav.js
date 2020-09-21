@@ -8,4 +8,5 @@ function openTopNav() {
 	}
 }
 
+//Add event listener to dropdown the nav
 DropDownButton.addEventListener("click", openTopNav);

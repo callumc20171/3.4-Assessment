@@ -130,6 +130,7 @@ footer p {
 	padding: 8px;
 	height: 100%;
 	width: auto;
+	max-width: 33%;
 	margin-top: -16px;
 }
 
@@ -582,6 +583,11 @@ footer p {
   	padding: 8px;
   	margin: 4px;
   	width: 100%;
+  }
+
+  #NationalsImg {
+  	max-width: 100%;
+  	float: none;
   }
 
   #FooterText {
